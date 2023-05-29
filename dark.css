@@ -1,0 +1,70 @@
+@import url('style.css');
+
+body{
+    background-color: var(--Very-Dark-Blue);
+    color: white;
+}
+
+main{
+    align-items: stretch;
+}
+
+.card{
+    background-color: var(--Dark-Desaturated-Blue);
+}
+
+.card:hover{
+    background-color: hsl(228, 28%, 24%);
+}
+
+.card-top__user{
+    color: var(--Desaturated-Blue);
+}
+
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.toggle {
+    position : relative ;
+    display : inline-block;
+    width : 5.5rem;
+    height : 2.5rem;
+    background-image: linear-gradient(to right,  hsl(210, 78%, 56%), hsl(146, 68%, 55%) );
+    border-radius: 2rem;
+}
+       
+/* After slide changes */
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--Very-Dark-Blue);
+    top: 4px;
+    left: 52px;
+    transition:  background-image, left, 0.6s;
+}
+       
+/* Checkbox checked effect */
+.checkbox:checked + .toggle::after {
+    left: 3px;
+}
+       
+/* Checkbox checked toggle label bg color */
+.checkbox:checked + .toggle {
+    background-image: linear-gradient(to right,  hsl(210, 78%, 56%), hsl(146, 68%, 55%) );
+}
+       
+/* Checkbox vanished */
+.checkbox {
+    display : none;
+}
+
+footer, footer a{
+    color: var(--White);
+}
